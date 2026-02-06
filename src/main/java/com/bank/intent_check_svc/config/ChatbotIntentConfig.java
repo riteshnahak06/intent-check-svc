@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-@Component
 @ConfigurationProperties(prefix = "chatbot")
 public class ChatbotIntentConfig {
 
