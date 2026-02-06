@@ -17,9 +17,7 @@ public class ReactiveIntentDetectionService {
     private final ChatbotIntentConfig config;
 
     public Mono<ChatIntent> detect(String message) {
-
         return Mono.fromSupplier(() -> {
-
             if (message == null || message.isBlank()) {
                 log.info("[CHAT][INTENT][EMPTY] message is null or blank → UNKNOWN");
                 return ChatIntent.UNKNOWN;
@@ -35,13 +33,11 @@ public class ReactiveIntentDetectionService {
 
                 for (String keyword : entry.getValue().getKeywords()) {
                     if (msg.contains(keyword.toLowerCase())) {
-
                         log.info(
                                 "[CHAT][INTENT][MATCH] intent={} keyword=\"{}\"",
                                 intent,
                                 keyword
                         );
-
                         return intent;
                     }
                 }

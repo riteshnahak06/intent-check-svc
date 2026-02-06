@@ -6,6 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.EnumMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +14,8 @@ import java.util.Map;
 @ConfigurationProperties(prefix = "chatbot")
 public class ChatbotIntentConfig {
 
-    private Map<ChatIntent, IntentConfig> intents = new EnumMap<>(ChatIntent.class);
+    private Map<ChatIntent, IntentConfig> intents = new LinkedHashMap<>();
+
 
     @Data
     public static class IntentConfig {
