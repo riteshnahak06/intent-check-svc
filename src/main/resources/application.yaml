@@ -1,3 +1,24 @@
 spring:
   application:
     name: intent-check-svc
+
+chatbot:
+  intents:
+    CHECK_BALANCE:
+      keywords:
+        - balance
+        - amount
+        - funds
+    LAST_TRANSACTIONS:
+      keywords:
+        - transaction
+        - transactions
+        - statement
+        - spent
+    LOAN_ELIGIBILITY:
+      keywords:
+        - loan
+        - eligible
+        - eligibility
+        - qualify
+
